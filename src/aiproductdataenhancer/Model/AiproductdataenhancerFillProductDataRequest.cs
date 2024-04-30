@@ -46,7 +46,7 @@ namespace aiproductdataenhancer.Model
         /// <param name="productDataToFill">productDataToFill.</param>
         /// <param name="domainsToInclude">domainsToInclude.</param>
         /// <param name="domainsToExclude">domainsToExclude.</param>
-        public AiproductdataenhancerFillProductDataRequest(string tenantId = default(string), AiproductdataenhancerLanguageCode? languageCode = default(AiproductdataenhancerLanguageCode?), AiproductdataenhancerProductInformation productInformation = default(AiproductdataenhancerProductInformation), List<string> productDataToFill = default(List<string>), List<string> domainsToInclude = default(List<string>), List<string> domainsToExclude = default(List<string>))
+        public AiproductdataenhancerFillProductDataRequest(string tenantId = default(string), AiproductdataenhancerLanguageCode? languageCode = default(AiproductdataenhancerLanguageCode?), AiproductdataenhancerProductInformation productInformation = default(AiproductdataenhancerProductInformation), List<AiproductdataenhancerProductDataToFill> productDataToFill = default(List<AiproductdataenhancerProductDataToFill>), List<string> domainsToInclude = default(List<string>), List<string> domainsToExclude = default(List<string>))
         {
             this.TenantId = tenantId;
             this.LanguageCode = languageCode;
@@ -72,7 +72,7 @@ namespace aiproductdataenhancer.Model
         /// Gets or Sets ProductDataToFill
         /// </summary>
         [DataMember(Name = "productDataToFill", EmitDefaultValue = false)]
-        public List<string> ProductDataToFill { get; set; }
+        public List<AiproductdataenhancerProductDataToFill> ProductDataToFill { get; set; }
 
         /// <summary>
         /// Gets or Sets DomainsToInclude

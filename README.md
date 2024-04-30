@@ -121,6 +121,7 @@ Class | Method | HTTP request | Description
  - [Model.AiproductdataenhancerFillProductDataRequest](docs/AiproductdataenhancerFillProductDataRequest.md)
  - [Model.AiproductdataenhancerFillProductDataResponse](docs/AiproductdataenhancerFillProductDataResponse.md)
  - [Model.AiproductdataenhancerLanguageCode](docs/AiproductdataenhancerLanguageCode.md)
+ - [Model.AiproductdataenhancerProductDataToFill](docs/AiproductdataenhancerProductDataToFill.md)
  - [Model.AiproductdataenhancerProductInformation](docs/AiproductdataenhancerProductInformation.md)
  - [Model.ProtobufAny](docs/ProtobufAny.md)
  - [Model.RpcStatus](docs/RpcStatus.md)

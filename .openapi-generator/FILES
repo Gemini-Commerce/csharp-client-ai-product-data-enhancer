@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 aiproductdataenhancer.sln
 api/openapi.yaml
@@ -8,6 +7,7 @@ docs/AiProductDataEnhancerApi.md
 docs/AiproductdataenhancerFillProductDataRequest.md
 docs/AiproductdataenhancerFillProductDataResponse.md
 docs/AiproductdataenhancerLanguageCode.md
+docs/AiproductdataenhancerProductDataToFill.md
 docs/AiproductdataenhancerProductInformation.md
 docs/ProtobufAny.md
 docs/RpcStatus.md
@@ -16,6 +16,7 @@ src/aiproductdataenhancer.Test/Api/AiProductDataEnhancerApiTests.cs
 src/aiproductdataenhancer.Test/Model/AiproductdataenhancerFillProductDataRequestTests.cs
 src/aiproductdataenhancer.Test/Model/AiproductdataenhancerFillProductDataResponseTests.cs
 src/aiproductdataenhancer.Test/Model/AiproductdataenhancerLanguageCodeTests.cs
+src/aiproductdataenhancer.Test/Model/AiproductdataenhancerProductDataToFillTests.cs
 src/aiproductdataenhancer.Test/Model/AiproductdataenhancerProductInformationTests.cs
 src/aiproductdataenhancer.Test/Model/ProtobufAnyTests.cs
 src/aiproductdataenhancer.Test/Model/RpcStatusTests.cs
@@ -41,6 +42,7 @@ src/aiproductdataenhancer/Model/AbstractOpenAPISchema.cs
 src/aiproductdataenhancer/Model/AiproductdataenhancerFillProductDataRequest.cs
 src/aiproductdataenhancer/Model/AiproductdataenhancerFillProductDataResponse.cs
 src/aiproductdataenhancer/Model/AiproductdataenhancerLanguageCode.cs
+src/aiproductdataenhancer/Model/AiproductdataenhancerProductDataToFill.cs
 src/aiproductdataenhancer/Model/AiproductdataenhancerProductInformation.cs
 src/aiproductdataenhancer/Model/ProtobufAny.cs
 src/aiproductdataenhancer/Model/RpcStatus.cs

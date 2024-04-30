@@ -42,7 +42,7 @@ components:
           $ref: '#/components/schemas/aiproductdataenhancerProductInformation'
         productDataToFill:
           items:
-            type: string
+            $ref: '#/components/schemas/aiproductdataenhancerProductDataToFill'
           type: array
         domainsToInclude:
           items:
@@ -265,6 +265,15 @@ components:
       - LANGUAGE_CODE_ZH
       - LANGUAGE_CODE_ZU
       type: string
+    aiproductdataenhancerProductDataToFill:
+      properties:
+        name:
+          type: string
+        valueSet:
+          items:
+            type: string
+          type: array
+      type: object
     aiproductdataenhancerProductInformation:
       properties:
         brand:
