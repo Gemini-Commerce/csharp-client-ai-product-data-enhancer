@@ -30,8 +30,40 @@ paths:
       tags:
       - AiProductDataEnhancer
       x-codegen-request-body-name: body
+  /aiproductdataenhancer.AiProductDataEnhancer/TranslateData:
+    post:
+      operationId: AiProductDataEnhancer_TranslateData
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/aiproductdataenhancerTranslateDataRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/aiproductdataenhancerTranslateDataResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      tags:
+      - AiProductDataEnhancer
+      x-codegen-request-body-name: body
 components:
   schemas:
+    aiproductdataenhancerDataToTranslate:
+      properties:
+        name:
+          type: string
+        value:
+          type: string
+      type: object
     aiproductdataenhancerFillProductDataRequest:
       properties:
         tenantId:
@@ -282,6 +314,40 @@ components:
           type: string
         title:
           type: string
+      type: object
+    aiproductdataenhancerTranslateDataRequest:
+      properties:
+        tenantId:
+          type: string
+        languageCode:
+          $ref: '#/components/schemas/aiproductdataenhancerLanguageCode'
+        dataToTranslate:
+          items:
+            $ref: '#/components/schemas/aiproductdataenhancerDataToTranslate'
+          type: array
+      type: object
+    aiproductdataenhancerTranslateDataResponse:
+      example:
+        confidenceRate: 0.8008282
+        completionRate: 6.0274563
+        dataTranslated:
+          key: dataTranslated
+      properties:
+        dataTranslated:
+          additionalProperties:
+            type: string
+          title: Translated product data
+          type: object
+        confidenceRate:
+          format: float
+          title: "Confidence is a value between 0 and 1, where 0 means no confidence\
+            \ and 1 means full confidence"
+          type: number
+        completionRate:
+          format: float
+          title: "Completion is a value between 0 and 1, where 0 means no completion\
+            \ and 1 means full completion"
+          type: number
       type: object
     protobufAny:
       properties:

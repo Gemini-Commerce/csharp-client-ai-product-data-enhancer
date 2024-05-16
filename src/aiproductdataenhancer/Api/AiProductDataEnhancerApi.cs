@@ -46,6 +46,26 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AiproductdataenhancerFillProductDataResponse</returns>
         ApiResponse<AiproductdataenhancerFillProductDataResponse> AiProductDataEnhancerFillProductDataWithHttpInfo(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AiproductdataenhancerTranslateDataResponse</returns>
+        AiproductdataenhancerTranslateDataResponse AiProductDataEnhancerTranslateData(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AiproductdataenhancerTranslateDataResponse</returns>
+        ApiResponse<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataWithHttpInfo(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -80,6 +100,31 @@ namespace aiproductdataenhancer.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerFillProductDataResponse>> AiProductDataEnhancerFillProductDataWithHttpInfoAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AiproductdataenhancerTranslateDataResponse</returns>
+        System.Threading.Tasks.Task<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AiproductdataenhancerTranslateDataResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerTranslateDataResponse>> AiProductDataEnhancerTranslateDataWithHttpInfoAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -337,6 +382,152 @@ namespace aiproductdataenhancer.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AiProductDataEnhancerFillProductData", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AiproductdataenhancerTranslateDataResponse</returns>
+        public AiproductdataenhancerTranslateDataResponse AiProductDataEnhancerTranslateData(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0)
+        {
+            aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerTranslateDataResponse> localVarResponse = AiProductDataEnhancerTranslateDataWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AiproductdataenhancerTranslateDataResponse</returns>
+        public aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataWithHttpInfo(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new aiproductdataenhancer.Client.ApiException(400, "Missing required parameter 'body' when calling AiProductDataEnhancerApi->AiProductDataEnhancerTranslateData");
+            }
+
+            aiproductdataenhancer.Client.RequestOptions localVarRequestOptions = new aiproductdataenhancer.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = aiproductdataenhancer.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = aiproductdataenhancer.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "AiProductDataEnhancerApi.AiProductDataEnhancerTranslateData";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AiproductdataenhancerTranslateDataResponse>("/aiproductdataenhancer.AiProductDataEnhancer/TranslateData", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AiProductDataEnhancerTranslateData", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AiproductdataenhancerTranslateDataResponse</returns>
+        public async System.Threading.Tasks.Task<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerTranslateDataResponse> localVarResponse = await AiProductDataEnhancerTranslateDataWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AiproductdataenhancerTranslateDataResponse)</returns>
+        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerTranslateDataResponse>> AiProductDataEnhancerTranslateDataWithHttpInfoAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new aiproductdataenhancer.Client.ApiException(400, "Missing required parameter 'body' when calling AiProductDataEnhancerApi->AiProductDataEnhancerTranslateData");
+            }
+
+
+            aiproductdataenhancer.Client.RequestOptions localVarRequestOptions = new aiproductdataenhancer.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = aiproductdataenhancer.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = aiproductdataenhancer.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "AiProductDataEnhancerApi.AiProductDataEnhancerTranslateData";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AiproductdataenhancerTranslateDataResponse>("/aiproductdataenhancer.AiProductDataEnhancer/TranslateData", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AiProductDataEnhancerTranslateData", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

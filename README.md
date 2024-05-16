@@ -113,16 +113,20 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AiProductDataEnhancerApi* | [**AiProductDataEnhancerFillProductData**](docs/AiProductDataEnhancerApi.md#aiproductdataenhancerfillproductdata) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/FillProductData | 
+*AiProductDataEnhancerApi* | [**AiProductDataEnhancerTranslateData**](docs/AiProductDataEnhancerApi.md#aiproductdataenhancertranslatedata) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/TranslateData | 
 
 
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.AiproductdataenhancerDataToTranslate](docs/AiproductdataenhancerDataToTranslate.md)
  - [Model.AiproductdataenhancerFillProductDataRequest](docs/AiproductdataenhancerFillProductDataRequest.md)
  - [Model.AiproductdataenhancerFillProductDataResponse](docs/AiproductdataenhancerFillProductDataResponse.md)
  - [Model.AiproductdataenhancerLanguageCode](docs/AiproductdataenhancerLanguageCode.md)
  - [Model.AiproductdataenhancerProductDataToFill](docs/AiproductdataenhancerProductDataToFill.md)
  - [Model.AiproductdataenhancerProductInformation](docs/AiproductdataenhancerProductInformation.md)
+ - [Model.AiproductdataenhancerTranslateDataRequest](docs/AiproductdataenhancerTranslateDataRequest.md)
+ - [Model.AiproductdataenhancerTranslateDataResponse](docs/AiproductdataenhancerTranslateDataResponse.md)
  - [Model.ProtobufAny](docs/ProtobufAny.md)
  - [Model.RpcStatus](docs/RpcStatus.md)
 

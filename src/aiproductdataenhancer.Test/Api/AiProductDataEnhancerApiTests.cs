@@ -65,5 +65,17 @@ namespace aiproductdataenhancer.Test.Api
             //var response = instance.AiProductDataEnhancerFillProductData(body);
             //Assert.IsType<AiproductdataenhancerFillProductDataResponse>(response);
         }
+
+        /// <summary>
+        /// Test AiProductDataEnhancerTranslateData
+        /// </summary>
+        [Fact]
+        public void AiProductDataEnhancerTranslateDataTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AiproductdataenhancerTranslateDataRequest body = null;
+            //var response = instance.AiProductDataEnhancerTranslateData(body);
+            //Assert.IsType<AiproductdataenhancerTranslateDataResponse>(response);
+        }
     }
 }
