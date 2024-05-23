@@ -26,19 +26,27 @@ using OpenAPIDateConverter = aiproductdataenhancer.Client.OpenAPIDateConverter;
 namespace aiproductdataenhancer.Model
 {
     /// <summary>
-    /// AiproductdataenhancerFillProductDataResponse
+    /// AiproductdataenhancerFillProductDataCheckRequest
     /// </summary>
-    [DataContract(Name = "aiproductdataenhancerFillProductDataResponse")]
-    public partial class AiproductdataenhancerFillProductDataResponse : IValidatableObject
+    [DataContract(Name = "aiproductdataenhancerFillProductDataCheckRequest")]
+    public partial class AiproductdataenhancerFillProductDataCheckRequest : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AiproductdataenhancerFillProductDataResponse" /> class.
+        /// Initializes a new instance of the <see cref="AiproductdataenhancerFillProductDataCheckRequest" /> class.
         /// </summary>
+        /// <param name="tenantId">tenantId.</param>
         /// <param name="jobId">jobId.</param>
-        public AiproductdataenhancerFillProductDataResponse(string jobId = default(string))
+        public AiproductdataenhancerFillProductDataCheckRequest(string tenantId = default(string), string jobId = default(string))
         {
+            this.TenantId = tenantId;
             this.JobId = jobId;
         }
+
+        /// <summary>
+        /// Gets or Sets TenantId
+        /// </summary>
+        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets JobId
@@ -53,7 +61,8 @@ namespace aiproductdataenhancer.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AiproductdataenhancerFillProductDataResponse {\n");
+            sb.Append("class AiproductdataenhancerFillProductDataCheckRequest {\n");
+            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

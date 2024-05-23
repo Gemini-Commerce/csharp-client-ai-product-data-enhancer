@@ -113,6 +113,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AiProductDataEnhancerApi* | [**AiProductDataEnhancerFillProductData**](docs/AiProductDataEnhancerApi.md#aiproductdataenhancerfillproductdata) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/FillProductData | 
+*AiProductDataEnhancerApi* | [**AiProductDataEnhancerFillProductDataCheck**](docs/AiProductDataEnhancerApi.md#aiproductdataenhancerfillproductdatacheck) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/FillProductDataCheck | 
 *AiProductDataEnhancerApi* | [**AiProductDataEnhancerTranslateData**](docs/AiProductDataEnhancerApi.md#aiproductdataenhancertranslatedata) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/TranslateData | 
 
 
@@ -120,8 +121,12 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AiproductdataenhancerDataToTranslate](docs/AiproductdataenhancerDataToTranslate.md)
+ - [Model.AiproductdataenhancerError](docs/AiproductdataenhancerError.md)
+ - [Model.AiproductdataenhancerFillProductDataCheckRequest](docs/AiproductdataenhancerFillProductDataCheckRequest.md)
+ - [Model.AiproductdataenhancerFillProductDataCheckResponse](docs/AiproductdataenhancerFillProductDataCheckResponse.md)
  - [Model.AiproductdataenhancerFillProductDataRequest](docs/AiproductdataenhancerFillProductDataRequest.md)
  - [Model.AiproductdataenhancerFillProductDataResponse](docs/AiproductdataenhancerFillProductDataResponse.md)
+ - [Model.AiproductdataenhancerJobStatus](docs/AiproductdataenhancerJobStatus.md)
  - [Model.AiproductdataenhancerLanguageCode](docs/AiproductdataenhancerLanguageCode.md)
  - [Model.AiproductdataenhancerProductDataToFill](docs/AiproductdataenhancerProductDataToFill.md)
  - [Model.AiproductdataenhancerProductInformation](docs/AiproductdataenhancerProductInformation.md)

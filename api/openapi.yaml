@@ -30,6 +30,31 @@ paths:
       tags:
       - AiProductDataEnhancer
       x-codegen-request-body-name: body
+  /aiproductdataenhancer.AiProductDataEnhancer/FillProductDataCheck:
+    post:
+      operationId: AiProductDataEnhancer_FillProductDataCheck
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/aiproductdataenhancerFillProductDataCheckRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/aiproductdataenhancerFillProductDataCheckResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      tags:
+      - AiProductDataEnhancer
+      x-codegen-request-body-name: body
   /aiproductdataenhancer.AiProductDataEnhancer/TranslateData:
     post:
       operationId: AiProductDataEnhancer_TranslateData
@@ -64,6 +89,55 @@ components:
         value:
           type: string
       type: object
+    aiproductdataenhancerError:
+      example:
+        code: code
+        message: message
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      type: object
+    aiproductdataenhancerFillProductDataCheckRequest:
+      properties:
+        tenantId:
+          type: string
+        jobId:
+          title: Job ID to check
+          type: string
+      type: object
+    aiproductdataenhancerFillProductDataCheckResponse:
+      example:
+        confidenceRate: 0.8008282
+        completionRate: 6.0274563
+        error:
+          code: code
+          message: message
+        productDataFilled:
+          key: productDataFilled
+        status: null
+      properties:
+        productDataFilled:
+          additionalProperties:
+            type: string
+          title: Filled product data
+          type: object
+        confidenceRate:
+          format: float
+          title: "Confidence is a value between 0 and 1, where 0 means no confidence\
+            \ and 1 means full confidence"
+          type: number
+        completionRate:
+          format: float
+          title: "Completion is a value between 0 and 1, where 0 means no completion\
+            \ and 1 means full completion"
+          type: number
+        status:
+          $ref: '#/components/schemas/aiproductdataenhancerJobStatus'
+        error:
+          $ref: '#/components/schemas/aiproductdataenhancerError'
+      type: object
     aiproductdataenhancerFillProductDataRequest:
       properties:
         tenantId:
@@ -87,27 +161,21 @@ components:
       type: object
     aiproductdataenhancerFillProductDataResponse:
       example:
-        confidenceRate: 0.8008282
-        completionRate: 6.0274563
-        productDataFilled:
-          key: productDataFilled
+        jobId: jobId
       properties:
-        productDataFilled:
-          additionalProperties:
-            type: string
-          title: Filled product data
-          type: object
-        confidenceRate:
-          format: float
-          title: "Confidence is a value between 0 and 1, where 0 means no confidence\
-            \ and 1 means full confidence"
-          type: number
-        completionRate:
-          format: float
-          title: "Completion is a value between 0 and 1, where 0 means no completion\
-            \ and 1 means full completion"
-          type: number
+        jobId:
+          title: Job ID to check
+          type: string
       type: object
+    aiproductdataenhancerJobStatus:
+      default: JOB_STATUS_UNKNOWN
+      enum:
+      - JOB_STATUS_UNKNOWN
+      - JOB_STATUS_PENDING
+      - JOB_STATUS_RUNNING
+      - JOB_STATUS_COMPLETED
+      - JOB_STATUS_FAILED
+      type: string
     aiproductdataenhancerLanguageCode:
       default: LANGUAGE_CODE_UNKNOWN
       enum:
@@ -304,7 +372,15 @@ components:
         valueSet:
           items:
             type: string
+          title: Value set is an optional field to provide a list of possible values
+            to fill
           type: array
+        metadata:
+          additionalProperties:
+            type: string
+          description: "Metadata is an optional field to provide additional information\
+            \ to the AI like, max length, min length, field description, etc."
+          type: object
       type: object
     aiproductdataenhancerProductInformation:
       properties:

@@ -26,25 +26,33 @@ using OpenAPIDateConverter = aiproductdataenhancer.Client.OpenAPIDateConverter;
 namespace aiproductdataenhancer.Model
 {
     /// <summary>
-    /// AiproductdataenhancerFillProductDataResponse
+    /// AiproductdataenhancerError
     /// </summary>
-    [DataContract(Name = "aiproductdataenhancerFillProductDataResponse")]
-    public partial class AiproductdataenhancerFillProductDataResponse : IValidatableObject
+    [DataContract(Name = "aiproductdataenhancerError")]
+    public partial class AiproductdataenhancerError : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AiproductdataenhancerFillProductDataResponse" /> class.
+        /// Initializes a new instance of the <see cref="AiproductdataenhancerError" /> class.
         /// </summary>
-        /// <param name="jobId">jobId.</param>
-        public AiproductdataenhancerFillProductDataResponse(string jobId = default(string))
+        /// <param name="code">code.</param>
+        /// <param name="message">message.</param>
+        public AiproductdataenhancerError(string code = default(string), string message = default(string))
         {
-            this.JobId = jobId;
+            this.Code = code;
+            this.Message = message;
         }
 
         /// <summary>
-        /// Gets or Sets JobId
+        /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "jobId", EmitDefaultValue = false)]
-        public string JobId { get; set; }
+        [DataMember(Name = "code", EmitDefaultValue = false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Message
+        /// </summary>
+        [DataMember(Name = "message", EmitDefaultValue = false)]
+        public string Message { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +61,9 @@ namespace aiproductdataenhancer.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AiproductdataenhancerFillProductDataResponse {\n");
-            sb.Append("  JobId: ").Append(JobId).Append("\n");
+            sb.Append("class AiproductdataenhancerError {\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

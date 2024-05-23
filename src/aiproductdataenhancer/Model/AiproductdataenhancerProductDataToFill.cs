@@ -36,10 +36,12 @@ namespace aiproductdataenhancer.Model
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="valueSet">valueSet.</param>
-        public AiproductdataenhancerProductDataToFill(string name = default(string), List<string> valueSet = default(List<string>))
+        /// <param name="metadata">Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc..</param>
+        public AiproductdataenhancerProductDataToFill(string name = default(string), List<string> valueSet = default(List<string>), Dictionary<string, string> metadata = default(Dictionary<string, string>))
         {
             this.Name = name;
             this.ValueSet = valueSet;
+            this.Metadata = metadata;
         }
 
         /// <summary>
@@ -55,6 +57,13 @@ namespace aiproductdataenhancer.Model
         public List<string> ValueSet { get; set; }
 
         /// <summary>
+        /// Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
+        /// </summary>
+        /// <value>Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.</value>
+        [DataMember(Name = "metadata", EmitDefaultValue = false)]
+        public Dictionary<string, string> Metadata { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -64,6 +73,7 @@ namespace aiproductdataenhancer.Model
             sb.Append("class AiproductdataenhancerProductDataToFill {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ValueSet: ").Append(ValueSet).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

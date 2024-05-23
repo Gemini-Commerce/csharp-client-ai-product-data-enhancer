@@ -52,6 +52,26 @@ namespace aiproductdataenhancer.Api
         /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AiproductdataenhancerFillProductDataCheckResponse</returns>
+        AiproductdataenhancerFillProductDataCheckResponse AiProductDataEnhancerFillProductDataCheck(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AiproductdataenhancerFillProductDataCheckResponse</returns>
+        ApiResponse<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckWithHttpInfo(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AiproductdataenhancerTranslateDataResponse</returns>
         AiproductdataenhancerTranslateDataResponse AiProductDataEnhancerTranslateData(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0);
 
@@ -100,6 +120,31 @@ namespace aiproductdataenhancer.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerFillProductDataResponse>> AiProductDataEnhancerFillProductDataWithHttpInfoAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AiproductdataenhancerFillProductDataCheckResponse</returns>
+        System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataCheckResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerFillProductDataCheckResponse>> AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -382,6 +427,152 @@ namespace aiproductdataenhancer.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AiProductDataEnhancerFillProductData", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AiproductdataenhancerFillProductDataCheckResponse</returns>
+        public AiproductdataenhancerFillProductDataCheckResponse AiProductDataEnhancerFillProductDataCheck(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0)
+        {
+            aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse> localVarResponse = AiProductDataEnhancerFillProductDataCheckWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AiproductdataenhancerFillProductDataCheckResponse</returns>
+        public aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckWithHttpInfo(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new aiproductdataenhancer.Client.ApiException(400, "Missing required parameter 'body' when calling AiProductDataEnhancerApi->AiProductDataEnhancerFillProductDataCheck");
+            }
+
+            aiproductdataenhancer.Client.RequestOptions localVarRequestOptions = new aiproductdataenhancer.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = aiproductdataenhancer.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = aiproductdataenhancer.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "AiProductDataEnhancerApi.AiProductDataEnhancerFillProductDataCheck";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AiproductdataenhancerFillProductDataCheckResponse>("/aiproductdataenhancer.AiProductDataEnhancer/FillProductDataCheck", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AiProductDataEnhancerFillProductDataCheck", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AiproductdataenhancerFillProductDataCheckResponse</returns>
+        public async System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse> localVarResponse = await AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataCheckResponse)</returns>
+        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse>> AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new aiproductdataenhancer.Client.ApiException(400, "Missing required parameter 'body' when calling AiProductDataEnhancerApi->AiProductDataEnhancerFillProductDataCheck");
+            }
+
+
+            aiproductdataenhancer.Client.RequestOptions localVarRequestOptions = new aiproductdataenhancer.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = aiproductdataenhancer.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = aiproductdataenhancer.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "AiProductDataEnhancerApi.AiProductDataEnhancerFillProductDataCheck";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AiproductdataenhancerFillProductDataCheckResponse>("/aiproductdataenhancer.AiProductDataEnhancer/FillProductDataCheck", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AiProductDataEnhancerFillProductDataCheck", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

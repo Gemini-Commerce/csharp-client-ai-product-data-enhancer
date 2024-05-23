@@ -71,5 +71,14 @@ namespace aiproductdataenhancer.Test.Model
         {
             // TODO unit test for the property 'ValueSet'
         }
+
+        /// <summary>
+        /// Test the property 'Metadata'
+        /// </summary>
+        [Fact]
+        public void MetadataTest()
+        {
+            // TODO unit test for the property 'Metadata'
+        }
     }
 }
