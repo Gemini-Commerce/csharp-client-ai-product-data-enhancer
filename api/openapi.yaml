@@ -395,7 +395,9 @@ components:
       properties:
         tenantId:
           type: string
-        languageCode:
+        targetLanguage:
+          $ref: '#/components/schemas/aiproductdataenhancerLanguageCode'
+        sourceLanguage:
           $ref: '#/components/schemas/aiproductdataenhancerLanguageCode'
         dataToTranslate:
           items:

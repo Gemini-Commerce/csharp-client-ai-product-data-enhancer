@@ -64,12 +64,21 @@ namespace aiproductdataenhancer.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'LanguageCode'
+        /// Test the property 'TargetLanguage'
         /// </summary>
         [Fact]
-        public void LanguageCodeTest()
+        public void TargetLanguageTest()
         {
-            // TODO unit test for the property 'LanguageCode'
+            // TODO unit test for the property 'TargetLanguage'
+        }
+
+        /// <summary>
+        /// Test the property 'SourceLanguage'
+        /// </summary>
+        [Fact]
+        public void SourceLanguageTest()
+        {
+            // TODO unit test for the property 'SourceLanguage'
         }
 
         /// <summary>

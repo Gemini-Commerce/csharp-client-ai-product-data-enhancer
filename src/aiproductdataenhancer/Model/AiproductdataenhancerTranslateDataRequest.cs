@@ -33,20 +33,28 @@ namespace aiproductdataenhancer.Model
     {
 
         /// <summary>
-        /// Gets or Sets LanguageCode
+        /// Gets or Sets TargetLanguage
         /// </summary>
-        [DataMember(Name = "languageCode", EmitDefaultValue = false)]
-        public AiproductdataenhancerLanguageCode? LanguageCode { get; set; }
+        [DataMember(Name = "targetLanguage", EmitDefaultValue = false)]
+        public AiproductdataenhancerLanguageCode? TargetLanguage { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SourceLanguage
+        /// </summary>
+        [DataMember(Name = "sourceLanguage", EmitDefaultValue = false)]
+        public AiproductdataenhancerLanguageCode? SourceLanguage { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AiproductdataenhancerTranslateDataRequest" /> class.
         /// </summary>
         /// <param name="tenantId">tenantId.</param>
-        /// <param name="languageCode">languageCode.</param>
+        /// <param name="targetLanguage">targetLanguage.</param>
+        /// <param name="sourceLanguage">sourceLanguage.</param>
         /// <param name="dataToTranslate">dataToTranslate.</param>
-        public AiproductdataenhancerTranslateDataRequest(string tenantId = default(string), AiproductdataenhancerLanguageCode? languageCode = default(AiproductdataenhancerLanguageCode?), List<AiproductdataenhancerDataToTranslate> dataToTranslate = default(List<AiproductdataenhancerDataToTranslate>))
+        public AiproductdataenhancerTranslateDataRequest(string tenantId = default(string), AiproductdataenhancerLanguageCode? targetLanguage = default(AiproductdataenhancerLanguageCode?), AiproductdataenhancerLanguageCode? sourceLanguage = default(AiproductdataenhancerLanguageCode?), List<AiproductdataenhancerDataToTranslate> dataToTranslate = default(List<AiproductdataenhancerDataToTranslate>))
         {
             this.TenantId = tenantId;
-            this.LanguageCode = languageCode;
+            this.TargetLanguage = targetLanguage;
+            this.SourceLanguage = sourceLanguage;
             this.DataToTranslate = dataToTranslate;
         }
 
@@ -71,7 +79,8 @@ namespace aiproductdataenhancer.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class AiproductdataenhancerTranslateDataRequest {\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
-            sb.Append("  LanguageCode: ").Append(LanguageCode).Append("\n");
+            sb.Append("  TargetLanguage: ").Append(TargetLanguage).Append("\n");
+            sb.Append("  SourceLanguage: ").Append(SourceLanguage).Append("\n");
             sb.Append("  DataToTranslate: ").Append(DataToTranslate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
