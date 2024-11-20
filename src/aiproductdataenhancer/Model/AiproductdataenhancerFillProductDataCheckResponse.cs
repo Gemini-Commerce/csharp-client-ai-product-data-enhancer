@@ -45,13 +45,16 @@ namespace aiproductdataenhancer.Model
         /// <param name="completionRate">completionRate.</param>
         /// <param name="status">status.</param>
         /// <param name="error">error.</param>
-        public AiproductdataenhancerFillProductDataCheckResponse(Dictionary<string, string> productDataFilled = default(Dictionary<string, string>), float confidenceRate = default(float), float completionRate = default(float), AiproductdataenhancerJobStatus? status = default(AiproductdataenhancerJobStatus?), AiproductdataenhancerError error = default(AiproductdataenhancerError))
+        /// <param name="imageUrls">imageUrls.</param>
+        public AiproductdataenhancerFillProductDataCheckResponse(Dictionary<string, string> productDataFilled = default(Dictionary<string, string>), float confidenceRate = default(float), float completionRate = default(float), AiproductdataenhancerJobStatus? status = default(AiproductdataenhancerJobStatus?), AiproductdataenhancerError error = default(AiproductdataenhancerError), List<string> imageUrls = default(List<string>))
         {
             this.ProductDataFilled = productDataFilled;
             this.ConfidenceRate = confidenceRate;
             this.CompletionRate = completionRate;
             this.Status = status;
             this.Error = error;
+            this.ImageUrls = imageUrls;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -79,6 +82,18 @@ namespace aiproductdataenhancer.Model
         public AiproductdataenhancerError Error { get; set; }
 
         /// <summary>
+        /// Gets or Sets ImageUrls
+        /// </summary>
+        [DataMember(Name = "imageUrls", EmitDefaultValue = false)]
+        public List<string> ImageUrls { get; set; }
+
+        /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -91,6 +106,8 @@ namespace aiproductdataenhancer.Model
             sb.Append("  CompletionRate: ").Append(CompletionRate).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  ImageUrls: ").Append(ImageUrls).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,7 +126,7 @@ namespace aiproductdataenhancer.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **ProductDataToFill**| [**List<AiproductdataenhancerProductDataToFill>**](AiproductdataenhancerProductDataToFill.md) |   | [optional]
 **DomainsToInclude**| **List<string>** |   | [optional]
 **DomainsToExclude**| **List<string>** |   | [optional]
+**ExtractImages**| **bool** |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

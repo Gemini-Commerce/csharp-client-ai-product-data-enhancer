@@ -38,6 +38,7 @@ namespace aiproductdataenhancer.Model
         public AiproductdataenhancerFillProductDataResponse(string jobId = default(string))
         {
             this.JobId = jobId;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -45,6 +46,12 @@ namespace aiproductdataenhancer.Model
         /// </summary>
         [DataMember(Name = "jobId", EmitDefaultValue = false)]
         public string JobId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,6 +62,7 @@ namespace aiproductdataenhancer.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class AiproductdataenhancerFillProductDataResponse {\n");
             sb.Append("  JobId: ").Append(JobId).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,7 +81,7 @@ namespace aiproductdataenhancer.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

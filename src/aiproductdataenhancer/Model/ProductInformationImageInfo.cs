@@ -26,41 +26,32 @@ using OpenAPIDateConverter = aiproductdataenhancer.Client.OpenAPIDateConverter;
 namespace aiproductdataenhancer.Model
 {
     /// <summary>
-    /// AiproductdataenhancerProductDataToFill
+    /// ProductInformationImageInfo
     /// </summary>
-    [DataContract(Name = "aiproductdataenhancerProductDataToFill")]
-    public partial class AiproductdataenhancerProductDataToFill : IValidatableObject
+    [DataContract(Name = "ProductInformationImageInfo")]
+    public partial class ProductInformationImageInfo : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AiproductdataenhancerProductDataToFill" /> class.
+        /// Initializes a new instance of the <see cref="ProductInformationImageInfo" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="valueSet">valueSet.</param>
-        /// <param name="metadata">Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc..</param>
-        public AiproductdataenhancerProductDataToFill(string name = default(string), List<string> valueSet = default(List<string>), Dictionary<string, string> metadata = default(Dictionary<string, string>))
+        /// <param name="url">url.</param>
+        /// <param name="metadata">metadata.</param>
+        public ProductInformationImageInfo(string url = default(string), Dictionary<string, string> metadata = default(Dictionary<string, string>))
         {
-            this.Name = name;
-            this.ValueSet = valueSet;
+            this.Url = url;
             this.Metadata = metadata;
             this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets Url
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name { get; set; }
+        [DataMember(Name = "url", EmitDefaultValue = false)]
+        public string Url { get; set; }
 
         /// <summary>
-        /// Gets or Sets ValueSet
+        /// Gets or Sets Metadata
         /// </summary>
-        [DataMember(Name = "valueSet", EmitDefaultValue = false)]
-        public List<string> ValueSet { get; set; }
-
-        /// <summary>
-        /// Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
-        /// </summary>
-        /// <value>Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.</value>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public Dictionary<string, string> Metadata { get; set; }
 
@@ -77,9 +68,8 @@ namespace aiproductdataenhancer.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AiproductdataenhancerProductDataToFill {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ValueSet: ").Append(ValueSet).Append("\n");
+            sb.Append("class ProductInformationImageInfo {\n");
+            sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");

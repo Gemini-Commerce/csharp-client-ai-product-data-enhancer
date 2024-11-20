@@ -72,6 +72,26 @@ namespace aiproductdataenhancer.Api
         /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AiproductdataenhancerGenerateProductDataResponse</returns>
+        AiproductdataenhancerGenerateProductDataResponse AiProductDataEnhancerGenerateProductData(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AiproductdataenhancerGenerateProductDataResponse</returns>
+        ApiResponse<AiproductdataenhancerGenerateProductDataResponse> AiProductDataEnhancerGenerateProductDataWithHttpInfo(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AiproductdataenhancerTranslateDataResponse</returns>
         AiproductdataenhancerTranslateDataResponse AiProductDataEnhancerTranslateData(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0);
 
@@ -106,7 +126,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AiproductdataenhancerFillProductDataResponse</returns>
-        System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataResponse> AiProductDataEnhancerFillProductDataAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataResponse> AiProductDataEnhancerFillProductDataAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -119,7 +139,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerFillProductDataResponse>> AiProductDataEnhancerFillProductDataWithHttpInfoAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerFillProductDataResponse>> AiProductDataEnhancerFillProductDataWithHttpInfoAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -131,7 +151,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AiproductdataenhancerFillProductDataCheckResponse</returns>
-        System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -144,7 +164,32 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataCheckResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerFillProductDataCheckResponse>> AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerFillProductDataCheckResponse>> AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AiproductdataenhancerGenerateProductDataResponse</returns>
+        System.Threading.Tasks.Task<AiproductdataenhancerGenerateProductDataResponse> AiProductDataEnhancerGenerateProductDataAsync(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AiproductdataenhancerGenerateProductDataResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerGenerateProductDataResponse>> AiProductDataEnhancerGenerateProductDataWithHttpInfoAsync(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -156,7 +201,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AiproductdataenhancerTranslateDataResponse</returns>
-        System.Threading.Tasks.Task<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -169,7 +214,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerTranslateDataResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerTranslateDataResponse>> AiProductDataEnhancerTranslateDataWithHttpInfoAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AiproductdataenhancerTranslateDataResponse>> AiProductDataEnhancerTranslateDataWithHttpInfoAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -369,7 +414,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AiproductdataenhancerFillProductDataResponse</returns>
-        public async System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataResponse> AiProductDataEnhancerFillProductDataAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataResponse> AiProductDataEnhancerFillProductDataAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataResponse> localVarResponse = await AiProductDataEnhancerFillProductDataWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -383,7 +428,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataResponse)</returns>
-        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataResponse>> AiProductDataEnhancerFillProductDataWithHttpInfoAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataResponse>> AiProductDataEnhancerFillProductDataWithHttpInfoAsync(AiproductdataenhancerFillProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -515,7 +560,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AiproductdataenhancerFillProductDataCheckResponse</returns>
-        public async System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AiproductdataenhancerFillProductDataCheckResponse> AiProductDataEnhancerFillProductDataCheckAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse> localVarResponse = await AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -529,7 +574,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerFillProductDataCheckResponse)</returns>
-        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse>> AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse>> AiProductDataEnhancerFillProductDataCheckWithHttpInfoAsync(AiproductdataenhancerFillProductDataCheckRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -573,6 +618,152 @@ namespace aiproductdataenhancer.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AiProductDataEnhancerFillProductDataCheck", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AiproductdataenhancerGenerateProductDataResponse</returns>
+        public AiproductdataenhancerGenerateProductDataResponse AiProductDataEnhancerGenerateProductData(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0)
+        {
+            aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerGenerateProductDataResponse> localVarResponse = AiProductDataEnhancerGenerateProductDataWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AiproductdataenhancerGenerateProductDataResponse</returns>
+        public aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerGenerateProductDataResponse> AiProductDataEnhancerGenerateProductDataWithHttpInfo(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new aiproductdataenhancer.Client.ApiException(400, "Missing required parameter 'body' when calling AiProductDataEnhancerApi->AiProductDataEnhancerGenerateProductData");
+            }
+
+            aiproductdataenhancer.Client.RequestOptions localVarRequestOptions = new aiproductdataenhancer.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = aiproductdataenhancer.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = aiproductdataenhancer.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "AiProductDataEnhancerApi.AiProductDataEnhancerGenerateProductData";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AiproductdataenhancerGenerateProductDataResponse>("/aiproductdataenhancer.AiProductDataEnhancer/GenerateProductData", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AiProductDataEnhancerGenerateProductData", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AiproductdataenhancerGenerateProductDataResponse</returns>
+        public async System.Threading.Tasks.Task<AiproductdataenhancerGenerateProductDataResponse> AiProductDataEnhancerGenerateProductDataAsync(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerGenerateProductDataResponse> localVarResponse = await AiProductDataEnhancerGenerateProductDataWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="aiproductdataenhancer.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AiproductdataenhancerGenerateProductDataResponse)</returns>
+        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerGenerateProductDataResponse>> AiProductDataEnhancerGenerateProductDataWithHttpInfoAsync(AiproductdataenhancerGenerateProductDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new aiproductdataenhancer.Client.ApiException(400, "Missing required parameter 'body' when calling AiProductDataEnhancerApi->AiProductDataEnhancerGenerateProductData");
+            }
+
+
+            aiproductdataenhancer.Client.RequestOptions localVarRequestOptions = new aiproductdataenhancer.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = aiproductdataenhancer.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = aiproductdataenhancer.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "AiProductDataEnhancerApi.AiProductDataEnhancerGenerateProductData";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AiproductdataenhancerGenerateProductDataResponse>("/aiproductdataenhancer.AiProductDataEnhancer/GenerateProductData", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AiProductDataEnhancerGenerateProductData", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -661,7 +852,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AiproductdataenhancerTranslateDataResponse</returns>
-        public async System.Threading.Tasks.Task<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AiproductdataenhancerTranslateDataResponse> AiProductDataEnhancerTranslateDataAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerTranslateDataResponse> localVarResponse = await AiProductDataEnhancerTranslateDataWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -675,7 +866,7 @@ namespace aiproductdataenhancer.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AiproductdataenhancerTranslateDataResponse)</returns>
-        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerTranslateDataResponse>> AiProductDataEnhancerTranslateDataWithHttpInfoAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<aiproductdataenhancer.Client.ApiResponse<AiproductdataenhancerTranslateDataResponse>> AiProductDataEnhancerTranslateDataWithHttpInfoAsync(AiproductdataenhancerTranslateDataRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)

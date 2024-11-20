@@ -26,43 +26,34 @@ using OpenAPIDateConverter = aiproductdataenhancer.Client.OpenAPIDateConverter;
 namespace aiproductdataenhancer.Model
 {
     /// <summary>
-    /// AiproductdataenhancerProductDataToFill
+    /// AiproductdataenhancerGenerateProductDataRequestProductInformation
     /// </summary>
-    [DataContract(Name = "aiproductdataenhancerProductDataToFill")]
-    public partial class AiproductdataenhancerProductDataToFill : IValidatableObject
+    [DataContract(Name = "aiproductdataenhancerGenerateProductDataRequestProductInformation")]
+    public partial class AiproductdataenhancerGenerateProductDataRequestProductInformation : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AiproductdataenhancerProductDataToFill" /> class.
+        /// Initializes a new instance of the <see cref="AiproductdataenhancerGenerateProductDataRequestProductInformation" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="valueSet">valueSet.</param>
-        /// <param name="metadata">Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc..</param>
-        public AiproductdataenhancerProductDataToFill(string name = default(string), List<string> valueSet = default(List<string>), Dictionary<string, string> metadata = default(Dictionary<string, string>))
+        /// <param name="textInfo">textInfo.</param>
+        /// <param name="imageInfo">imageInfo.</param>
+        public AiproductdataenhancerGenerateProductDataRequestProductInformation(ProductInformationTextInfo textInfo = default(ProductInformationTextInfo), ProductInformationImageInfo imageInfo = default(ProductInformationImageInfo))
         {
-            this.Name = name;
-            this.ValueSet = valueSet;
-            this.Metadata = metadata;
+            this.TextInfo = textInfo;
+            this.ImageInfo = imageInfo;
             this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets TextInfo
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name { get; set; }
+        [DataMember(Name = "textInfo", EmitDefaultValue = false)]
+        public ProductInformationTextInfo TextInfo { get; set; }
 
         /// <summary>
-        /// Gets or Sets ValueSet
+        /// Gets or Sets ImageInfo
         /// </summary>
-        [DataMember(Name = "valueSet", EmitDefaultValue = false)]
-        public List<string> ValueSet { get; set; }
-
-        /// <summary>
-        /// Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
-        /// </summary>
-        /// <value>Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.</value>
-        [DataMember(Name = "metadata", EmitDefaultValue = false)]
-        public Dictionary<string, string> Metadata { get; set; }
+        [DataMember(Name = "imageInfo", EmitDefaultValue = false)]
+        public ProductInformationImageInfo ImageInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets additional properties
@@ -77,10 +68,9 @@ namespace aiproductdataenhancer.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AiproductdataenhancerProductDataToFill {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ValueSet: ").Append(ValueSet).Append("\n");
-            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("class AiproductdataenhancerGenerateProductDataRequestProductInformation {\n");
+            sb.Append("  TextInfo: ").Append(TextInfo).Append("\n");
+            sb.Append("  ImageInfo: ").Append(ImageInfo).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

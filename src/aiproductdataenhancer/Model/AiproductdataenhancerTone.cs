@@ -26,43 +26,34 @@ using OpenAPIDateConverter = aiproductdataenhancer.Client.OpenAPIDateConverter;
 namespace aiproductdataenhancer.Model
 {
     /// <summary>
-    /// AiproductdataenhancerProductDataToFill
+    /// AiproductdataenhancerTone
     /// </summary>
-    [DataContract(Name = "aiproductdataenhancerProductDataToFill")]
-    public partial class AiproductdataenhancerProductDataToFill : IValidatableObject
+    [DataContract(Name = "aiproductdataenhancerTone")]
+    public partial class AiproductdataenhancerTone : IValidatableObject
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="AiproductdataenhancerProductDataToFill" /> class.
+        /// Gets or Sets ToneType
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="valueSet">valueSet.</param>
-        /// <param name="metadata">Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc..</param>
-        public AiproductdataenhancerProductDataToFill(string name = default(string), List<string> valueSet = default(List<string>), Dictionary<string, string> metadata = default(Dictionary<string, string>))
+        [DataMember(Name = "toneType", EmitDefaultValue = false)]
+        public AiproductdataenhancerToneType? ToneType { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AiproductdataenhancerTone" /> class.
+        /// </summary>
+        /// <param name="toneType">toneType.</param>
+        /// <param name="customTone">customTone.</param>
+        public AiproductdataenhancerTone(AiproductdataenhancerToneType? toneType = default(AiproductdataenhancerToneType?), string customTone = default(string))
         {
-            this.Name = name;
-            this.ValueSet = valueSet;
-            this.Metadata = metadata;
+            this.ToneType = toneType;
+            this.CustomTone = customTone;
             this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets CustomTone
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ValueSet
-        /// </summary>
-        [DataMember(Name = "valueSet", EmitDefaultValue = false)]
-        public List<string> ValueSet { get; set; }
-
-        /// <summary>
-        /// Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
-        /// </summary>
-        /// <value>Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.</value>
-        [DataMember(Name = "metadata", EmitDefaultValue = false)]
-        public Dictionary<string, string> Metadata { get; set; }
+        [DataMember(Name = "customTone", EmitDefaultValue = false)]
+        public string CustomTone { get; set; }
 
         /// <summary>
         /// Gets or Sets additional properties
@@ -77,10 +68,9 @@ namespace aiproductdataenhancer.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AiproductdataenhancerProductDataToFill {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ValueSet: ").Append(ValueSet).Append("\n");
-            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("class AiproductdataenhancerTone {\n");
+            sb.Append("  ToneType: ").Append(ToneType).Append("\n");
+            sb.Append("  CustomTone: ").Append(CustomTone).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

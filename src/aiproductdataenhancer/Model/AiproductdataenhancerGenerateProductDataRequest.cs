@@ -26,10 +26,10 @@ using OpenAPIDateConverter = aiproductdataenhancer.Client.OpenAPIDateConverter;
 namespace aiproductdataenhancer.Model
 {
     /// <summary>
-    /// AiproductdataenhancerFillProductDataRequest
+    /// AiproductdataenhancerGenerateProductDataRequest
     /// </summary>
-    [DataContract(Name = "aiproductdataenhancerFillProductDataRequest")]
-    public partial class AiproductdataenhancerFillProductDataRequest : IValidatableObject
+    [DataContract(Name = "aiproductdataenhancerGenerateProductDataRequest")]
+    public partial class AiproductdataenhancerGenerateProductDataRequest : IValidatableObject
     {
 
         /// <summary>
@@ -38,24 +38,18 @@ namespace aiproductdataenhancer.Model
         [DataMember(Name = "languageCode", EmitDefaultValue = false)]
         public AiproductdataenhancerLanguageCode? LanguageCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="AiproductdataenhancerFillProductDataRequest" /> class.
+        /// Initializes a new instance of the <see cref="AiproductdataenhancerGenerateProductDataRequest" /> class.
         /// </summary>
         /// <param name="tenantId">tenantId.</param>
         /// <param name="languageCode">languageCode.</param>
         /// <param name="productInformation">productInformation.</param>
-        /// <param name="productDataToFill">productDataToFill.</param>
-        /// <param name="domainsToInclude">domainsToInclude.</param>
-        /// <param name="domainsToExclude">domainsToExclude.</param>
-        /// <param name="extractImages">extractImages.</param>
-        public AiproductdataenhancerFillProductDataRequest(string tenantId = default(string), AiproductdataenhancerLanguageCode? languageCode = default(AiproductdataenhancerLanguageCode?), AiproductdataenhancerProductInformation productInformation = default(AiproductdataenhancerProductInformation), List<AiproductdataenhancerProductDataToFill> productDataToFill = default(List<AiproductdataenhancerProductDataToFill>), List<string> domainsToInclude = default(List<string>), List<string> domainsToExclude = default(List<string>), bool extractImages = default(bool))
+        /// <param name="productDataToGenerate">productDataToGenerate.</param>
+        public AiproductdataenhancerGenerateProductDataRequest(string tenantId = default(string), AiproductdataenhancerLanguageCode? languageCode = default(AiproductdataenhancerLanguageCode?), List<AiproductdataenhancerGenerateProductDataRequestProductInformation> productInformation = default(List<AiproductdataenhancerGenerateProductDataRequestProductInformation>), List<GenerateProductDataRequestProductDataToGenerate> productDataToGenerate = default(List<GenerateProductDataRequestProductDataToGenerate>))
         {
             this.TenantId = tenantId;
             this.LanguageCode = languageCode;
             this.ProductInformation = productInformation;
-            this.ProductDataToFill = productDataToFill;
-            this.DomainsToInclude = domainsToInclude;
-            this.DomainsToExclude = domainsToExclude;
-            this.ExtractImages = extractImages;
+            this.ProductDataToGenerate = productDataToGenerate;
             this.AdditionalProperties = new Dictionary<string, object>();
         }
 
@@ -69,31 +63,13 @@ namespace aiproductdataenhancer.Model
         /// Gets or Sets ProductInformation
         /// </summary>
         [DataMember(Name = "productInformation", EmitDefaultValue = false)]
-        public AiproductdataenhancerProductInformation ProductInformation { get; set; }
+        public List<AiproductdataenhancerGenerateProductDataRequestProductInformation> ProductInformation { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProductDataToFill
+        /// Gets or Sets ProductDataToGenerate
         /// </summary>
-        [DataMember(Name = "productDataToFill", EmitDefaultValue = false)]
-        public List<AiproductdataenhancerProductDataToFill> ProductDataToFill { get; set; }
-
-        /// <summary>
-        /// Gets or Sets DomainsToInclude
-        /// </summary>
-        [DataMember(Name = "domainsToInclude", EmitDefaultValue = false)]
-        public List<string> DomainsToInclude { get; set; }
-
-        /// <summary>
-        /// Gets or Sets DomainsToExclude
-        /// </summary>
-        [DataMember(Name = "domainsToExclude", EmitDefaultValue = false)]
-        public List<string> DomainsToExclude { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ExtractImages
-        /// </summary>
-        [DataMember(Name = "extractImages", EmitDefaultValue = true)]
-        public bool ExtractImages { get; set; }
+        [DataMember(Name = "productDataToGenerate", EmitDefaultValue = false)]
+        public List<GenerateProductDataRequestProductDataToGenerate> ProductDataToGenerate { get; set; }
 
         /// <summary>
         /// Gets or Sets additional properties
@@ -108,14 +84,11 @@ namespace aiproductdataenhancer.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AiproductdataenhancerFillProductDataRequest {\n");
+            sb.Append("class AiproductdataenhancerGenerateProductDataRequest {\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  LanguageCode: ").Append(LanguageCode).Append("\n");
             sb.Append("  ProductInformation: ").Append(ProductInformation).Append("\n");
-            sb.Append("  ProductDataToFill: ").Append(ProductDataToFill).Append("\n");
-            sb.Append("  DomainsToInclude: ").Append(DomainsToInclude).Append("\n");
-            sb.Append("  DomainsToExclude: ").Append(DomainsToExclude).Append("\n");
-            sb.Append("  ExtractImages: ").Append(ExtractImages).Append("\n");
+            sb.Append("  ProductDataToGenerate: ").Append(ProductDataToGenerate).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

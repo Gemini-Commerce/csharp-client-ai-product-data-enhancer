@@ -26,22 +26,24 @@ using OpenAPIDateConverter = aiproductdataenhancer.Client.OpenAPIDateConverter;
 namespace aiproductdataenhancer.Model
 {
     /// <summary>
-    /// AiproductdataenhancerProductDataToFill
+    /// GenerateProductDataRequestProductDataToGenerate
     /// </summary>
-    [DataContract(Name = "aiproductdataenhancerProductDataToFill")]
-    public partial class AiproductdataenhancerProductDataToFill : IValidatableObject
+    [DataContract(Name = "GenerateProductDataRequestProductDataToGenerate")]
+    public partial class GenerateProductDataRequestProductDataToGenerate : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AiproductdataenhancerProductDataToFill" /> class.
+        /// Initializes a new instance of the <see cref="GenerateProductDataRequestProductDataToGenerate" /> class.
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="valueSet">valueSet.</param>
         /// <param name="metadata">Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc..</param>
-        public AiproductdataenhancerProductDataToFill(string name = default(string), List<string> valueSet = default(List<string>), Dictionary<string, string> metadata = default(Dictionary<string, string>))
+        /// <param name="tone">tone.</param>
+        public GenerateProductDataRequestProductDataToGenerate(string name = default(string), List<string> valueSet = default(List<string>), Dictionary<string, string> metadata = default(Dictionary<string, string>), AiproductdataenhancerTone tone = default(AiproductdataenhancerTone))
         {
             this.Name = name;
             this.ValueSet = valueSet;
             this.Metadata = metadata;
+            this.Tone = tone;
             this.AdditionalProperties = new Dictionary<string, object>();
         }
 
@@ -65,6 +67,12 @@ namespace aiproductdataenhancer.Model
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
+        /// Gets or Sets Tone
+        /// </summary>
+        [DataMember(Name = "tone", EmitDefaultValue = false)]
+        public AiproductdataenhancerTone Tone { get; set; }
+
+        /// <summary>
         /// Gets or Sets additional properties
         /// </summary>
         [JsonExtensionData]
@@ -77,10 +85,11 @@ namespace aiproductdataenhancer.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AiproductdataenhancerProductDataToFill {\n");
+            sb.Append("class GenerateProductDataRequestProductDataToGenerate {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ValueSet: ").Append(ValueSet).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  Tone: ").Append(Tone).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
